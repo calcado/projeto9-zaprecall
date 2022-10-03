@@ -1,34 +1,14 @@
 import styled from 'styled-components'
 
-
 export default function Footer(
-  {green, yeallow, red, setGreen, setYellow, setRed, answerNumber,setAnswerNumber,questionsAnswered, setQuestionsAnswered, questions }){
+  { color, setColor, answerNumber, setAnswerNumber, questionsAnswered, setQuestionsAnswered, questions }) {
 
-
-
-  function Unkown(){
-    console.log("olá")
-    setAnswerNumber(answerNumber + 1)
-  }
-  function Almost(){
-    console.log("olá")
-    setAnswerNumber(answerNumber + 1)
-  } 
-  function Zap(){
-    console.log("olá")
-    setAnswerNumber(answerNumber + 1)
-  }
 
   return (
     <Foot>
-      <Buttons>
-        <Button1 onClick={Unkown}>Não lembrei</Button1>
-        <Button2 onClick={Almost}>Quase não lembrei</Button2>
-        <Button3 onClick={Zap}>Zap!</Button3>
-      </Buttons>
       <span>{answerNumber}/{questions} CONCLUÍDOS</span>
     </Foot>
-)
+  )
 }
 
 const Foot = styled.div`
@@ -49,41 +29,3 @@ const Foot = styled.div`
 
 `
 
-const Buttons = styled.div`
-display: flex;
-    width: 80%;
-    justify-content: space-between;
-    margin: 20px;
-
-`
-const Button1 = styled.button`
-background-color: #FF3030;
-width: 85px;
-height: 37px;
-color: #FFFFFF;
-
-`
-
-const Button2 = styled.button`
-background-color: #FF922E;
-width: 85px;
-height: 37px;
-color: #FFFFFF;
-
-`
-const Button3 = styled.button`
-background-color: #2FBE34;
-width: 85px;
-height: 37px;
-color: #FFFFFF;
-
-
-`
-
-/* Você vai precisar trocar a cor dos botões e alguns textos!
-  VERDE = "#2FBE34"
-  AMARELO = "#FF922E"
-  VERMELHO = "#FF3030"
-  CINZA = "#333333" 
-*/
-// 
