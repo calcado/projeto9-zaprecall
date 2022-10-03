@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export default function Footer(
-  { color, setColor, answerNumber, setAnswerNumber, questionsAnswered, setQuestionsAnswered, questions }) {
+  { answerNumber, questions }) {
 
 
   return (
