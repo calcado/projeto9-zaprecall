@@ -8,15 +8,28 @@ import deck from './deck.js'
 
 
 export default function App(){
+  const [answer, setAnswer] = useState("")
   const [answerNumber, setAnswerNumber ] = useState(0)
+  const [green, setGreen] = useState([])
+  const [yellow, setYellow] = useState([])
+  const [red, setRed] = useState([])
+  const questions = deck.length
   
+ 
+
     return (
 
     <Container>
     <GlobalStyle/>  
     <Header/>
-    <ListFlashCards deck={deck}/>
-    <Footer answerNUmber = {answerNumber} setAnswerNumber={setAnswerNumber}/>
+    <ListFlashCards 
+      green={green} yellow={yellow} red={red} deck={deck}/>
+    <Footer 
+      green={green} yellow={yellow} red={red}  
+      setGreen={setGreen}  setYellow={setYellow} setRed={setRed}  
+      answerNumber = {answerNumber} setAnswerNumber={setAnswerNumber}
+      questions={questions}
+      />
     </Container>
 
 )

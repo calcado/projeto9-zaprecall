@@ -1,21 +1,22 @@
 import styled from 'styled-components'
-import {useState} from 'react'
 
-export default function Footer(props){
+
+export default function Footer(
+  {green, yeallow, red, setGreen, setYellow, setRed, answerNumber,setAnswerNumber,questionsAnswered, setQuestionsAnswered, questions }){
 
 
 
   function Unkown(){
     console.log("olá")
-    props.setAnswerNumber(props.answerNumber + 1)
+    setAnswerNumber(answerNumber + 1)
   }
   function Almost(){
     console.log("olá")
-    props.setAnswerNumber(props.answerNumber + 1)
+    setAnswerNumber(answerNumber + 1)
   } 
   function Zap(){
     console.log("olá")
-    props.setAnswerNumber(props.answerNumber + 1)
+    setAnswerNumber(answerNumber + 1)
   }
 
   return (
@@ -25,7 +26,7 @@ export default function Footer(props){
         <Button2 onClick={Almost}>Quase não lembrei</Button2>
         <Button3 onClick={Zap}>Zap!</Button3>
       </Buttons>
-      <span>{props.answerNumber} CONCLUÍDOS</span>
+      <span>{answerNumber}/{questions} CONCLUÍDOS</span>
     </Foot>
 )
 }
